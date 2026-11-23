@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: lokseva-kenpath
+    runtime: node
+    plan: free
+    buildCommand: node --test tests/assist.test.mjs workflow.test.mjs
+    startCommand: node server.mjs
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: HOST
+        value: "0.0.0.0"
