@@ -49,7 +49,9 @@ Maharashtra's procedure identifies these three desks and permits a correction re
 
 [State Revenue Department procedure (PDF)](https://aaplesarkar.mahaonline.gov.in/pdf/Fees%2C%20Procedure%2C%20Checklist_Income%20Certificate.pdf) · [Satara district checklist](https://www.satara.gov.in/en/service/income-certificate/)
 
-## Assistance and its limits
+## Where AI helps and why
+
+A clerk reviewing farm income needs a different question from one reviewing a salary. At intake, the assistant uses the income description to suggest what evidence to look for. During scrutiny, it suggests what to verify against the declaration. At final review, it surfaces a question the officer can check against the case history before recording a decision. The officer interprets the evidence, writes the reason and chooses whether to approve, reject or return the application.
 
 The local retrieval model compares Marathi text against labeled synthetic examples for five income sources. Character trigrams and words support partial matches. Inverse-document-frequency weights make distinctive terms more influential. Cosine similarity selects relevant examples. A weak match produces no source-specific prompt. The app separately checks structured amounts and missing documents. This approach keeps sample case data local to the application server, works without an API key and makes it possible to trace a suggestion to its input. Dialect, negation, mixed income and unseen sources can change the meaning. Officers read the evidence before acting. The regression fixtures establish expected behavior on development examples. They do not establish field accuracy.
 
